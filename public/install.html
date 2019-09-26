@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+    <p id="tip" style="width: 100%; line-height: 280px; text-align: center; font-size: 40px;">請掃描二維碼并繼續安裝！</p>
+</body>
+<script>
+    // require('./renderer.js');
+    const { ipcRenderer } = require('electron');
+
+    // 扫码枪
+    var keyVal = "";
+    window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 13) {
+            ipcRenderer.send("Install", keyVal);
+            keyVal = "";
+        } else {
+            if (event.key.length === 1) keyVal += event.key;
+        }
+    });
+
+</script>
+
+</html>

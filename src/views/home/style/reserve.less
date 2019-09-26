@@ -1,0 +1,210 @@
+@import '../../../common/style/common.less';
+@bgDark: @bgColor; // zb
+
+// @bgDark: #363646;
+ @fntDark: #2A2939;
+
+.grid_button() {
+    color: @fntDark;
+    font-weight: bold;
+    border-radius: 0px;
+    width: 106.6px;
+    height: 64px;
+}
+
+.fontSty() {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #2A2939;
+}
+
+.center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve {
+    height: 580px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    .head {
+        line-height: 50px;
+        background: @bgDark;
+        font-family: MicrosoftYaHei;
+        font-size: 23px;
+        font-weight: normal;
+        font-stretch: normal;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        img {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .date_time {
+        width: 50%;
+        padding: 16px 10px 0 48px;
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #999999;
+        line-height: 20px;
+        background-color: #F9F9F9;
+        span {
+            float: right;
+        }
+    }
+    .mian_content {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 30px;
+        .left_section {
+            flex: 1;
+            .content {
+                .table_head {
+                    padding-left: 10px;
+                    line-height: 38px;
+                    .fontSty();
+                    background-color: #C8C8C8;
+                    text-align: center;
+                    :nth-child(4) {
+                        padding-right: 20px;
+                    }
+                }
+                .table_conent {
+                    height: 384px;
+                    background-color: #FFFFFF;
+                    border: 1px solid #EAEAEA;
+                    padding-top: 8px;
+                    padding-left: 10px;
+                    .fontSty();
+                    text-align: center;
+                    .ant-row {
+                        padding-top: 5px;
+                        :nth-child(4) {
+                            text-align: right;
+                            padding-right: 25px;
+                        }
+                    }
+                }
+            }
+            .table_foot {
+                margin-top: 20px;
+            }
+        }
+        .right_section {
+            flex: 1;
+            margin-left: 10px;
+            .screen {
+                height: 100px;
+                width: 420px;
+                line-height: 30px;
+                border: 1px solid #EAEAEA;
+                background-color: #FFFFFF;
+                margin-bottom: 4px;
+                .show {
+                    // float: right;
+                    // text-align: right;
+                    // line-height: 30px;
+                    // margin-top: 60px;
+                    // margin-right: 10px;
+                    border: none;
+                    width: 300px;
+                    font-family: PingFangSC-Regular;
+                    font-size: 40px;
+                    font-weight: bold;
+                    color: #2A2939;
+                }
+                :nth-child(1) {
+                    padding: 15px;
+                    font-family: PingFangSC-Regular;
+                    font-size: 40px;
+                    color: #2A2939;
+                    padding-right: 20px;
+                }
+            }
+            .keyboard {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                .up, .down{
+                    height: 160px;
+                    width: 420px;
+                    button{
+                        font-size: 22px;
+                        text-align: center;
+                        padding: 0; //zb
+                        margin: 2px; //zb
+                        color: @fontColor3; //zb
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    button{
+                        font-size: 22px;
+                        text-align: center;
+                        margin-right: 15px;
+                        padding: 0; //zb
+                        margin: 2px; //zb
+                        color: @fontColor2; //zb
+                    }
+                }
+                .fixed_button{
+                    width: 80px;
+                    height: 76px;
+                    line-height: 76px;
+                    background: #FFFFFF;
+                    img{
+                        width: 36.1px;
+                        height: 20.5px;
+                    }
+                }
+                .big {
+                    width: 164px;
+                }
+                .zero_button{
+                    width: 180px;
+                    height: 76px;
+                    line-height: 76px;
+                    background: #FFFFFF;
+                }
+                .ok_button{
+                    width: 80px;
+                    height: 156px;
+                    line-height: 156px;
+                    background: @secondColor;
+                    span{
+                        color: #FFFFFF;
+                    }
+                }
+                .clear_button{
+                    background: @redColor;
+                    color: #fff;
+                    span{
+                        color: #FFFFFF;
+                    }
+                }
+                .back_button{
+                    background: @mainColor;
+                    color: #fff;
+                    span{
+                        color: #FFFFFF;
+                    }
+                }
+                .dian{
+                    font-weight: 800;
+                }
+                .down_left{
+                    width: 336px;
+                    height: 152px;
+                    float: left;
+                }
+            }
+        }
+    }
+}

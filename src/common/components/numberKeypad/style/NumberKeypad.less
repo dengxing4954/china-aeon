@@ -1,0 +1,116 @@
+@import "../../../style/common.less";
+.numberKeypad {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fbfbfb;
+    //border: 1px solid #e0e0e0;
+    box-shadow: @boxShadow;
+    border-radius: 14px;
+    .kaypad {
+        width: 348px;
+        height: 324px;
+        padding: 6px;
+        .kaypad_le {
+            width: 251px;
+        }
+        .kaypad_ri {
+            width: 85px;
+        }
+        div {
+            float: left;
+            button {
+                padding: 0;
+                width: 75px;
+                height: 70px;
+                line-height: 60px;
+                box-sizing: border-box;
+                font-size: 18px;
+                border-radius: 12px;
+                margin: 4px;
+            }
+            .user_button {
+                font-size: 16px;
+            }
+            .clear_button {
+                color: #fff;
+                background: @redColor;
+            }
+            .back_button {
+                color: #fff;
+                background: @mainColor;
+            }
+            .ok_button {
+                color: #fff;
+                height: 147px;
+                background: @secondColor;
+            }
+        }
+        .clearfix{
+            content: ".";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+    }
+}
+
+.numberKeypad_modal {
+    .ant-modal-content {
+        height: 324px;
+        background-color: #fbfbfb;
+        box-shadow: @boxShadow;
+        border-radius: 14px;
+        .ant-modal-body {
+            padding: 0;
+            .kaypad {
+                padding: 6px;
+                .kaypad_self {
+                    width: 166px;
+                }
+                .kaypad_le {
+                    width: 251px;
+                }
+                .kaypad_ri {
+                    width: 85px;
+                }
+                div {
+                    float: left;
+                    button {
+                        padding: 0;
+                        width: 75px;
+                        height: 70px;
+                        line-height: 60px;
+                        box-sizing: border-box;
+                        font-size: 18px;
+                        border-radius: 12px;
+                        margin: 4px;
+                    }
+                    .user_button {
+                        font-size: 16px;
+                    }
+                    .clear_button {
+                        color: #fff;
+                        background: @redColor;
+                    }
+                    .back_button {
+                        color: #fff;
+                        background: @mainColor;
+                    }
+                    .ok_button {
+                        color: #fff;
+                        height: 147px;
+                        background: @secondColor;
+                    }
+                }
+                .clearfix{
+                    content: ".";
+                    visibility: hidden;
+                    display: block;
+                    height: 0;
+                    clear: both;
+                }
+            }
+        }
+    }
+}

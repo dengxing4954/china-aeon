@@ -1,0 +1,10 @@
+[
+    { "dec": "EPOS日志", "name": "epos.log", "path": "D:/aeonPossv/jetty/ePosLog" },
+    { "dec": "POS服务日志", "name": "posSV.log", "path": "D:/aeonPossv/jetty/ePosLog" },
+    { "dec": "路由日志", "name": "zuul.log", "path": "D:/aeonPossv/jetty/ePosLog" },
+    { "dec": "服务统计日志", "name": "statistics.log", "path": "D:/aeonPossv/jetty/ePosLog" },
+    { "dec": "POS日志", "name": "log" },
+    { "dec": "武汉通日志", "name": "CLS"},
+    { "dec": "工行日志", "name": "ICBC"},
+    { "dec": "银联日志", "name": "GMC"}
+]

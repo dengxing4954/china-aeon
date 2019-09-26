@@ -1,0 +1,125 @@
+@bgDark: #363646;
+@fntDark: #2A2939;
+@actColor: #BE4C94;
+
+.btn(@bg: 0; @color: 0; @w: 0) {
+    background-color: @bg;
+    color: @color;
+    width: @w;
+    height:40px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid @bgDark;
+}
+
+.center(@jc: center;) {
+    display: flex;
+    justify-content: @jc;
+    align-items: center;
+}
+
+.configpage {
+    height: 550px;
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    .title {
+        height: 50px;
+        background-color: @bgDark;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 12px;
+        font-size: 23px;
+        img {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .tabs_content_th {
+        width: 800px;
+        display: flex;
+        .center(@jc: space-around;);
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .tabs_content {
+        height: 380px;
+        overflow-y: auto;
+        .tabs_content_tr {
+            .center(@jc: space-between;);
+            padding: 10px;
+            line-height: 51px;
+            input {
+                margin: 0 20px 0 30px;
+                height: 41px;
+                padding: 6px 12px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                color: @fntDark;
+                flex: 1;
+                padding-left: 20px;
+            }
+            input:focus {
+                transition: border linear .2s;
+                outline: none;
+                border-color:#BE4C94 ;
+                color: @actColor;
+                //box-shadow: 0 0 10px #BE4C94 ;
+            }
+            label {
+                flex: 1;
+                border-bottom: 1px solid #ebedf0;
+            }
+        }
+    }
+    .foot {
+        position: absolute;
+        bottom: 0px;
+        width: 800px;
+        height: 70px;
+        .center(@jc: space-around;);
+        .submit {
+            .btn(@bg: @bgDark; @color: #fff; @w: 60px;);
+            &:active {
+                background-color: #000;
+            }
+        }
+        .test {
+            .btn(@bg: #fff; @color: @fntDark; @w: 124px;);
+            margin-right: 15px;
+            &:active {
+                background-color: darken(hsl(0, 0%, 100%), 10%);
+            }
+        }
+    }
+
+    .ant-tabs-tab-active {
+        color: @bgDark;
+        ant-tabs-tab {
+            background: @bgDark;
+        }
+    }
+    .ant-tabs-nav {
+        display: flex;
+        .ant-tabs-tab {
+            &:hover {
+                color: @fntDark;
+            }
+        }
+    }
+    .ant-tabs-ink-bar {
+        background-color: @bgDark   ;
+    }
+    .ant-tabs-tab {
+        flex: 1 1;
+        text-align: center;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,78 @@
+@color: #C6539B;
+@fontColor: #2A2939;
+@borderColor: #EAEAEA;
+
+.presale_game_coin {
+  .ant-modal-header {
+    background: #363646;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 0;
+    .ant-modal-title {
+      color: #fff;
+      font-size: 26px;
+      line-height: 50px;
+    }
+  }
+  .ant-modal-body {
+    background: #f9f9f9;
+    padding: 30px;
+    height: 450px;
+    .ant-carousel {
+      .slick-dots {
+        bottom: -12px;
+        li button {
+          color: #363646;
+          font-size: 18px;
+          width: 30px;
+          height: 30px;
+          border-radius: 8px;
+          margin: 5px;
+        }
+        li.slick-active button {
+          background: #363646;
+          color: #fff;
+        }
+      }
+    }
+    .game_coin_table {
+      width: 100%;
+      border-top: 1px solid #666;
+      border-left: 1px solid #666;
+      .ant-row {
+        line-height: 50px;
+        font-size: 18px;
+        >div {
+          overflow: auto;
+          height: 51px;
+          padding: 0 20px;
+          border-bottom: 1px solid #666;
+          border-right: 1px solid #666;
+          span {
+            margin-right: 10px;
+          }
+        }
+      }
+      .game_coin_ladder {
+        >div {
+          height: 201px;
+        }
+        .ladder_list {
+          overflow: auto;
+        }
+      }
+    }
+  }
+  .ant-modal-footer {
+    padding: 15px 8px;
+    text-align: center;
+    button {
+      width: 150px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 5px;
+      background: #363646;
+    }
+  }
+}

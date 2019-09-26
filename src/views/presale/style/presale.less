@@ -1,0 +1,1572 @@
+@import '../../../common/style/common.less';
+@mainColor: #20e1ad;
+@mainColor2: #1a86f5;
+@btnColor: @bgColor;
+
+//@color: #C6539B;
+@color: #B13B89; 
+@fontColor: #2A2939;
+@borderColor: #EAEAEA;
+
+.presale {
+    width: 1024px;
+    background: #D7D7D7;
+    margin-bottom: 32px;
+    height: calc(100vh - 32px);
+    color: @fontColor;
+    .top {
+        height: 44px;
+        line-height: 44px;
+        background-color: #e9e9ef;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .presale_top {
+        height: 100px;
+        background: #fff;
+        display: flex;
+
+        .presale_top_le {
+            width: 598px;
+            position: relative;
+            height: 74px;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .presale_online_box{
+                top: 5px;
+                left: 100px;
+                width: 33px;
+                height: 30px;
+                position: absolute;
+            }
+            .presale_online_1{
+                 width: 33px;
+                 height: 30px;
+                 position: absolute;
+                 background-image: url("../../../common/image/ononline_icon.png");
+                 background-size: 100%;
+                 background-repeat: no-repeat;
+                 top: 5px;
+                 left: 100px;
+             }
+            .presale_online_off{
+                width: 33px;
+                height: 30px;
+                //position: absolute;
+                background-image: url("../../../common/image/noonline_icon.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+            .presale_online_2{
+                width: 33px;
+                height: 30px;
+                position: absolute;
+                background-image: url("../../../common/image/offonline_icon1.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                top: 5px;
+                left: 100px;
+            }
+            .presale_online_3 {
+                width: 33px;
+                height: 30px;
+                position: absolute;
+                background-image: url("../../../common/image/offonline_icon2.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                top: 5px;
+                left: 100px;
+            }
+            .presale_le_deliveryFlag {
+                margin-left: 5px;
+                margin-right: 5px;
+                display: inline-block;
+                color: @color;
+                /*color: #F8A921;*/
+                font-size: 20px;
+                cursor: pointer;
+                &:hover {
+                    color: #F8A921;
+                }
+            }
+            .presale_le_upload {
+                color: @color;
+                width: 33px;
+                font-size: 24px;
+                height: 30px;
+                position: absolute;
+                left: 140px;
+                top: 0;
+                animation: flash 1s ease infinite;
+            }
+            @keyframes flash{
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            .presale_le_language {
+                position: relative;
+                box-sizing: border-box;
+                // top: 3px;
+                // left: 0;
+                width: 40px;
+                height: 44px;
+                // line-height: 36px;
+                background: #d76cb0;
+                color: #fff;
+                font-size: 12px;
+                border-top-right-radius: 22px;
+                border-bottom-right-radius: 22px;
+                text-align: right;
+
+                > img {
+                    width: 20px;
+                    height: 18px;
+                    margin-top: 13px;
+                    margin-right: 12px;
+                }
+                > span {
+                    position: absolute;
+                    display: block;
+                    width: 20px;
+                    height: 18px;
+                    border: 1px solid #fff;
+                    text-align: center;
+                    background: #d76cb0;
+
+                    &:first-of-type {
+                        right: 10px;
+                        top: 10px;
+                        z-index: 10;
+                    }
+                    &:last-of-type {
+                        right: 13px;
+                        top: 13px;
+                        z-index: 100;
+                    }
+                }
+            }
+            .presale_le_djlbFlag {
+                color: @color;
+            }
+            .presale_le_reload {
+                float: right;
+                padding-right: 10px;
+                i {
+                    color: @color;
+                }
+            }
+            .presale_code {
+                width: 300px;
+                box-sizing: border-box;
+                color: @fontColor;
+                background: #fff;
+                border: 1px solid #EAEAEA;
+                border-radius: 22px;
+                height: 44px;
+                margin-left: 14px;
+
+                > img {
+                    width: 20px;
+                    height: 20px;
+                    margin: 12px 14px 12px 20px;
+                }
+                > input {
+                    width: 220px;
+                    height: 20px;
+                    margin-top: 12px;
+                    outline: none;
+                    border: none;
+                }
+                .ant-input:focus {
+                    box-shadow: none;
+                }
+            }
+            .presale_billno {
+                width: 246px;
+                padding-left: 20px;
+                box-sizing: border-box;
+            }
+        }
+        .presale_top_ri {
+            position: relative;
+            background: #fff;
+            width: 426px;
+            border-bottom: 1px solid #EAEAEA;
+            padding: 0;
+            padding-top: 14px;
+            display: flex;
+            background-color: #f1f1f1;
+
+            > .presale-top-ri-card {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 340px;
+                height: 80px;
+                background-color: #B13B89;
+                margin: 0;
+                display: flex;
+
+                > .member-card-left {
+                    width: calc(100% - 60px);
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+
+                    > .member-cardno {
+                        color: white;
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                    > .member-info {
+                        display: flex;
+                        margin-top: 6px;
+                        
+                        > div {
+                            flex: 1;
+                            color: white;
+                            opacity: 0.5;
+                            font-size: 12px;
+
+                            > img {
+                                width: 12px;
+                                height: 12px;
+                            }
+                            
+                        }
+
+                        :nth-child(2) {
+                            text-align: right;
+                            > img {
+                                margin-right: 10px;
+                            }
+                        }
+                        :nth-child(3) {
+                            text-align: right;
+                            > img {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        &.member-active {
+                            > div{
+                                opacity: 1;
+                                color: #FFD673;
+                            }
+                        }
+                    }
+                }
+                > .member-card-right {
+                    width: 60px;
+                    text-align: center;
+                    > img {
+                        width: 36px;
+                        height: 22px;
+                        margin-top: 20px;
+                        margin-right: 20px;
+                    }
+                    > p{
+                        font-size: 12px;
+                        color: white;
+                        opacity: 0.5;
+                        margin-right: 20px;
+                        margin-top: 6px;
+                    }
+
+                    &.member-active {
+                        > p {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            > .presale-top-ri-scan {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 80px;
+                width: 86px;
+
+                > img {
+                    width: 55px;
+                    height: 52px;
+                    margin-top: 14px;
+                    margin-left: 16px;
+                }
+            }
+
+
+            .presale_operator {
+                position: relative;
+                z-index: 9;
+                height: 38px;
+                .presale_operator_title {
+                    position: relative;
+                    line-height: 38px;
+                    font-size: 18px;
+                    color: @fontColor;
+                    padding-left: 20px;
+                    background: #fff;
+                    z-index: 10;
+                    i {
+                        position: relative;
+                        padding: 0 10px;
+                        z-index: 2;
+                    }
+                    .clock_time {
+                        position: absolute;
+                        right: 12px;
+                        top: 0;
+                        font-size: 18px;
+                        line-height: 38px;
+                        height: 38px;
+                        z-index: 1;
+                    }
+                }
+                .presale_operator_detail {
+                    background: #fefefe;
+                    border-top: 1px solid @borderColor;
+                    border-bottom: 1px solid @borderColor;
+                    padding: 20px 20px 5px 20px;
+                    p {
+                        margin-bottom: 20px;
+                        span {
+                            display: block;
+                            font-size: 18px;
+                            line-height: 30px;
+                        }
+                    }
+                    transition: transform 1s;
+                }
+                .show {
+                    transform: translateY(0);
+                }
+                .hidden {
+                    transform: translateY(-300px);
+                }
+            }
+            .presale_info {
+                .presale_vip {
+                    float: left;
+                    //width: 245px;
+                    width: 380px;
+                    //margin-right: 5px;
+                    height: 61px;
+                    font-size: 20px;
+                    padding: 0 20px;
+                    background-image: url("../../../common/image/vipcard.png");
+                    background-size: cover;
+                    color: #fff;
+                    overflow: hidden;
+                    .presale_vipInfo {
+                        .presale_vipOut {
+                            line-height: 64px;
+                        }
+                        .presale_vipIn {
+                            padding: 5px 0;
+                            line-height: 25px;
+                            span {
+                                font-size: 18px;
+                            }
+                            .presale_vip_type {
+                                background: #363646;
+                                color: #F8A921;
+                                float: right;
+                                margin-right: 2px;
+                                padding: 1px 8px;
+                                border-radius: 4px;
+                                font-size: 18px;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                    .presale_vipIcon {
+                        line-height: 64px;
+                        text-align: right;
+                        i {
+                            font-size: 30px;
+                            margin-top: 18px;
+                        }
+                    }
+                }
+                .presale_show_menu {
+                    float: right;
+                    margin-right: 10px;
+                    font-size: 30px;
+                    line-height: 60px;
+                    color: @fontColor;
+                }
+            }
+        }
+    }
+    .presale_main {
+        display: flex;
+        .presale_le {
+            height: 694px;
+            width: 598px;
+            margin-top: -26px;
+            background: #f9f9f9;
+            box-sizing: border-box;
+            border-right: 1px solid @borderColor;
+            flex: 1 1 auto;
+            .presale_le_table {
+                height: 520px;
+                border-bottom: 1px solid #ccc;
+
+                > .presale_goods_container_header {
+                    width: 100%;
+                    height: 34px;
+                    background-color: rgba(54, 54, 70, 1);
+
+                    > ul {
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-size: 14px;
+
+                        > li {
+                            height: 34px;
+                            line-height: 34px;
+
+                            &:nth-child(1) {
+                                width: 204px;
+                                padding-left: 20px;
+                            }
+                            &:nth-child(2) {
+                                width: 120px;
+                                text-align: center;
+                            }
+                            &:nth-child(3),
+                            &:nth-child(4) {
+                                width: 88px;
+                                text-align: right;
+                            }
+                            &:nth-child(5) {
+                                width: 96px;
+                                text-align: center;
+                            }
+                        }
+
+                    }
+                }
+
+                > .presale_goods_container_body {
+                    overflow: hidden;
+                    background-color: rgba(249, 249, 249, 1);
+                    position: relative;
+                    > ul {
+                        list-style: none;
+                        overflow: auto;
+                        height: 480px;
+
+                        > p{
+                            font-size: 12px;
+                            margin-top: 12px;
+                            padding-left: 20px;
+                        }
+
+                        > p + li {
+                            border-top: 1px solid #d7d7d7;
+                        }
+
+                        > li {
+                            display: flex;
+                            font-size: 16px;
+                            position: relative;
+                            padding-top: 10px;
+                            padding-bottom: 12px;
+                            border-bottom: 1px solid #d7d7d7;
+                            background-color: rgba(255, 255, 255, 1);
+
+                            &.last-goods {
+                                border: 1px solid #ff77cd;
+                                background-color: rgba(254, 242, 250, 1); 
+                            }
+
+                            > div{
+                                &:nth-child(1) {
+                                    width: 204px;
+                                    padding-left: 20px;
+
+                                    > p{
+                                        &:last-child {
+                                            color: #eb4e61;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    width: 120px;
+                                    text-align: center;
+                                }
+                                &:nth-child(3),
+                                &:nth-child(4) {
+                                    width: 88px;
+                                    text-align: right;
+                                }
+                                &:nth-child(5) {
+                                    width: 96px;
+                                    text-align: center;
+                                }
+                            }
+
+                            > .option-btn {
+                                position: absolute;
+                                bottom: 0px;
+                                right: 20px;
+
+                                > img {
+                                    width: 16px;
+                                    height: 16px;
+                                    margin: 10px 20px;
+                                }
+                            }
+                        }
+                    }
+                    > .goods_list_pagination {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;
+                        width: 100%;
+                        height: 32px;
+                        text-align: center;
+                    }
+                }
+
+                .ant-table-small {
+                    border: 0;
+                }
+                .ant-table-small > .ant-table-content > .ant-table-body {
+                    margin: 0;
+                }
+                table {
+                    padding: 0;
+                    border-collapse: collapse;
+                    .ant-table-thead {
+                        height: 38px;
+                        font-size: 18px;
+                        tr {
+                            th {
+                                background: #363646;
+                                color: #fff;
+                                border: 0;
+                            }
+                        }
+                    }
+                    .ant-table-tbody {
+                        background: #fff;
+                        color: @fontColor;
+                        font-size: 16px;
+                        tr {
+                            height: 100px;
+                            vertical-align: top;
+                            .info_column {  //zb
+                                //padding-left: 28px;
+                                padding-top: 5px;
+                                //position: relative;
+                                .info_name {
+                                    height: 24px;
+                                    //width: 200px;
+                                    overflow: hidden;
+                                }
+                                .pop_details {
+                                    position: absolute;
+                                    width: 555px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    span {
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                            .edit_column {  //zb
+                                //padding-left: 28px;
+                                //padding-top: 5px; //zb
+                                position: relative;
+                                .anticon-edit {
+                                    font-size: 22px;
+                                    position: absolute;
+                                    bottom: 5px;
+                                    //left: 0;  //zb
+                                    right: 74px;    //zb
+                                }
+                                .anticon-delete {
+                                    font-size: 22px;
+                                    position: absolute;
+                                    bottom: 5px;
+                                    //left: 0;  //zb
+                                    right: 24px;    //zb
+                                }
+                            }
+                            .qty_column {
+                                .number_count {
+                                    margin-top: -8px;
+                                }
+                            }
+                            td {
+                                padding: 28px 5px;
+                            }
+                        }
+                        .new_row {
+                            //border: 2px solid #FF77CD;lighten(@base, 30%)
+                            border: 2px solid saturate(@color, 20%);
+                            //border: 2px solid lighten(@color, 20%);
+                            .info_column {
+                                .close_icon {
+                                    //background-color: rgba(198, 83, 155, 0.6);
+                                    background-color: fadeout(@color, 50%);
+                                }
+                            }
+                            td {
+                                background: fadeout(@color, 85%);
+                            }
+                        }
+                    }
+                }
+                .ant-pagination,.ant-table-pagination {
+                    margin: 10px;
+                }
+            }
+            .presale_le_del_goods {
+                width: 100%;
+                height: 60px;
+                background-color: rgba(242, 242, 242, 1);
+                box-shadow: 0 1px 3px 0 rgba(255, 255, 255, .5);
+                display: flex;
+
+                > div{
+                    &:nth-child(1) {
+                        width: 60px;
+
+                        > span {
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            text-align: center;
+                            background-color: #333;
+                            color: white;
+                            font-size: 16px;
+                            margin: 20px auto;
+                        }
+                    }
+                    &:nth-child(2) {
+                        width: 200px;
+                        font-size: 16px;
+                        color: rgba(51, 51, 51, 1);
+
+                        > p{
+                            text-decoration: line-through;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                    &:nth-child(3),
+                    &:nth-child(4),
+                    &:nth-child(5),
+                    &:nth-child(6) {
+                        text-align: right;
+                        text-decoration: line-through;
+                        line-height: 60px;
+                        padding-right: 20px;
+                    }
+                    &:nth-child(3) {
+                        width: 60px;
+                    }
+                    &:nth-child(4) {
+                        width: 84px;
+                    }
+                    &:nth-child(5) {
+                        width: 60px;
+                    }
+                    &:nth-child(6) {
+                        width: 120px;
+                    }
+                }
+
+                
+            }
+            .presale_le_foot {
+                background-color: #fff;
+                height: 91px;
+                width: 100%;
+                color: @fontColor;
+                position: relative;
+                display: flex;
+                padding-top: 20px;
+                padding-left: 20px;
+
+                > .presale_footer_left {
+                    color: #2a2939;
+                    font-size: 20px;
+                    line-height: 24px;
+                    width: calc(100% - 173px);
+
+                    >.presale_footer_money {
+                        display: flex;
+                        margin-top: 8px;
+
+                        > div {
+                            flex: 1;
+
+                        }
+                        :last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+                > .presale_footer_right {
+                    width: 172px;
+
+                    > button {
+                        width: 132px;
+                        height: 54px;
+                        background-color: #B13B89;
+                        color: white;
+                        margin-left: 20px;
+
+                        &.disabled {
+                            background-color: #848492;
+                            color: white;
+                        }
+                    }
+                }
+
+                .presale_le_button {
+                    float: right;
+                    width: 200px;
+                    padding: 8px;
+                    .ant-btn {
+                        height: 40px;
+                        width: 180px;
+                        margin-right: 16px;
+                        margin-bottom: 8px;
+                        font-size: 20px;
+                    }
+                    .ant-btn-primary {
+                        font-size: 24px;
+                        height: 60px;
+                        background-color: @fontColor;
+                    }
+                    .disabled {
+                        background-color: #f5f5f5;
+                        border-color: #d9d9d9;
+                    }
+                }
+                .presale_le_total {
+                    float: left;
+                    height: 123px;
+                    margin: 15px 0 0 15px;
+                    span {
+                        display: block;
+                        height: 32px;
+                        line-height: 32px;
+                        font-size: 20px;
+                    }
+                }
+                .presale_le_money {
+                    //float: right;
+                    width: 150px;
+                    margin: 15px 10px 0 0;
+                    position: absolute;
+                    right: 195px;
+                    top: 0px;
+                    bottom: 0;
+                    span {
+                        display: block;
+                        text-align: right;
+                    }
+                    :last-child {
+                        word-break:break-all;
+                        vertical-align: bottom;
+                        line-height: 28px;
+                        font-size: 32px;
+                        color: @color;
+                    }
+                    :first-child {
+                        height: 32px;
+                        line-height: 32px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .presale_le_practice {
+            background: #363646;
+            .presale_le_table {
+                table {
+                    .ant-table-tbody {
+                        tr {
+                            background: #FFF;
+                            .info_column {
+                                .close_icon {
+                                    background-color: #e5e5e5;
+                                }
+                            }
+                        }
+                        .new_row {
+                            border: 2px solid #F8A921;
+                            .info_column {
+                                .close_icon {
+                                    background-color: #faad14;
+                                }
+                            }
+                            td {
+                                background: #fff2cc;
+                            }
+                        }
+                    }
+                }
+                .ant-pagination-item-active {
+                    border-color: #F8A921;
+                    a {
+                        color: #F8A921;
+                    }
+                }
+            }
+        }
+        .presale_ri {
+            position: relative;
+            background: #fff;
+            width: 426px;
+            // flex: 0 1 auto;
+            //width: 426px;
+            height: 668px;
+            height: calc(100vh - 132px);
+            .presale_option {
+                width: 100%;
+                //height: 424px;
+                height: 485px;
+                //border-bottom: 1px solid @borderColor;
+                .ant-spin-nested-loading {
+                    .ant-spin-blur {
+                        opacity: 0.5;
+                    }
+                    div {
+                        .ant-spin {
+                            max-height: 470px;
+                            i {
+                                font-size: 45px;
+                                color: #e0e0e0;
+                            }
+                        }
+                    }
+                }
+                .presale_info {
+                    width: 426px;
+                    //height: 64px;
+                    margin: 0;
+                    border-bottom: 1px solid @borderColor;
+                    height: 125px;
+                    padding: 0 8px;
+                    /*li {
+                        height: 64px;
+                        border-radius: 8px 8px 0 0;
+                        input {
+                            border: 0;
+                            border-bottom: 1px solid @borderColor;
+                            padding: 0;
+                            font-size: 16px;
+                        }
+                    }*/
+                }
+                .presale_tags {
+                    width: 426px;
+                    position: relative;
+                    ul {
+                        padding: 3px;
+                        width: 426px;
+                        li {
+                            font-family: Consolas, Monaco, monospace;
+                            float: left;
+                            width: 132px;
+                            height: 54px;
+                            font-size: 16px;
+                            padding: 4px;
+                            text-align: center;
+                            border-radius: 4px;
+                            margin: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            word-break: break-all;
+                            white-space: normal;
+                           
+
+                            &.selected {
+                                background-color: white;
+                                color: #b13b89;
+                                border: 1px solid rgba(177, 59, 137, 1);
+                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                 box-sizing: border-box;
+
+                                span.price_tag {
+                                    background-color: rgba(177, 59, 137, 1) !important;
+                                    border: none;
+                                    top: -1px;
+                                    left: -1px;
+                                }
+                            }
+                        }
+                        .presale_tags_brands {
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+                            span {
+                                flex: 1;
+                                display: flex;
+                                align-items: center;
+
+                                &.price_tag {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    border-top-left-radius: 4px;
+                                    border-bottom-right-radius: 4px;
+                                    background-color: rgba(126, 135, 163, 1);
+                                    color: white;
+                                    padding: 0 8px;
+                                    font-size: 12px;
+                                    line-height: 16px;
+                                }
+                            }
+                        }
+                        .presale_tags_arrow {
+                            // position: absolute;
+                            // bottom: 3px;
+                            // right: 3px;
+                            font-weight: 500;
+                            font-size: 26px;
+                            background: #f1f1f1;
+                            border: 1px solid #eaeaea;
+                            box-sizing: border-box;
+                            color: #7d7d7d;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            > div {
+                                flex: 1;
+                                // border: 1px solid #eaeaea;
+                                border-radius: 4px 0px 0px 4px;
+
+                                > img {
+                                    width: 32px;
+                                    height: 25px;
+
+                                }
+                            }
+                            i {
+                                float: left;
+                                width: 64px;
+                                height: 52px;
+                                line-height: 52px;
+                                font-size: 38px;
+                            }
+                            .presale_arrow_disable {
+                                color: #dbdbdb;
+                            }
+                            :first-child {
+                                border-right: 1px solid @borderColor;
+                            }
+                        }
+                    }
+    
+                }
+                .presale_brands {
+                    margin-top: 12px;
+                    margin-bottom: 8px;
+                    height: 130px;
+                    // border-bottom: 1px solid @borderColor;
+                    ul li {
+                        background: #848492;
+                        color: #fff;
+                    }
+                    .presale_tag_selected {
+                        background: #363646;
+                        color: #F8A921;
+                        position: relative;
+                    }
+                    /*.presale_tag_selected:after {
+                        display: block;
+                        position: absolute;
+                        content: " ";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 4px;
+                        top: 8px;
+                        left: 8px;
+                        background: #F8A921;
+                    }*/
+                }
+                .presale_kinds {
+                    height: 380px;
+                    ul {
+                        height: 380px;
+                    }
+                    ul li {
+                        background: #f1f1f1;
+                        color: #2A2939;
+                    }
+                    .presale-kinds-page-tip {
+                        height: 20px;
+                        line-height: 14px;
+                        text-align: center;
+
+                        > span {
+                            display: inline-block;
+                            width: 8px;
+                            height: 8px;
+                            opacity: 1;
+                            background: rgba(216,216,216,1);
+                            border-radius: 4px;
+                            margin-right: 8px;
+
+                            &.selected {
+                                background: rgba(177, 59, 137, 1);
+                            }
+                        }
+                    }
+                }
+            }
+            .presale_menu{
+                width: 426px;
+                > .presale_menu_content,
+                > .presale_menu_content_hide {
+                    // max-height: 655px;
+                    height: 92px;
+                    // overflow: auto;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    margin-bottom: 4px;
+                    border-top: 1px solid @borderColor;
+                    z-index: 1000;
+                    ul {
+                        position: relative;
+                        // min-height: 279px;
+                        width: 100%;
+                        background-color: #fff;
+                        padding: 5px 2px;
+                        .selected {
+                            //border: 1px solid #888;
+                            //background: #f7f7f7;
+                            background: #FEF2FA;
+                            box-shadow: 2px 2px 5px @color;
+                        }
+                        li{
+                            float: left;
+                            //width: 106px;
+                            width: 20%;
+                            //height: 85px;
+                            height: 90px;
+                            text-align: center;
+                            position: relative;
+                            &.selected {
+                                border: 1px solid red;
+                            }
+                            img {
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                                margin-top: 15px;
+                            }
+                            i {
+                                display: inline-block;
+                                width: 35px;
+                                height: 35px;
+                                line-height: 35px;
+                                font-size: 35px;
+                                margin-top: 12px;
+                            }
+                            .badge {
+                                position: absolute;
+                                left: 50px;
+                                top: 28px;
+                                padding: 0 5px;
+                                min-width: 20px;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
+                                border-radius: 10px;
+                                background: @color;
+                                color: #fff;
+                            }
+                            p{
+                                font-size: 14px;
+                                margin-top: 14px;
+                                color: #666;
+                            }
+                        }
+                        // .presale_menu_more {
+                        //     position: absolute;
+                        //     bottom: 0;
+                        //     right: 1px;
+                        // }
+                    }
+                }
+                :after{
+                    content:"";
+                    display:block;
+                    height:0;
+                    clear:both;
+                    visibility:hidden;
+                }
+                > .presale_menu_content_hide {
+                    visibility: hidden;
+                    width: 100%;
+                    height: 300px;
+                    position: absolute;
+                    left: 0;
+                    z-index: 999;
+                    transition: all ease .4s;
+                    bottom: -400px;
+
+                    &.show {
+                        visibility: visible;
+                        bottom: 80px;
+                    }
+                }
+            }
+            .presale_menu_key {
+                > div {
+                    top: 0;
+                }
+            }
+            .presale_tag_key {
+                min-width: 150px;
+                > div {
+                    top: 0;
+                    ul {
+                        position: relative;
+                        min-height: 279px;
+                        background-color: #fff;
+                        padding: 5px;
+                        .selected {
+                            background: #fff;
+                            box-shadow: none;
+                            div {
+                                //border: 1px solid #888;
+                                //background: #f7f7f7;
+                                background: #363646;
+                                p {
+                                    color: #F8A921;
+                                }
+                            }
+                        }
+                        li {
+                            float: left;
+                            padding: 5px;
+                            height: 64px;
+                        }
+                        li > div{
+                            background: #f0f0f0;
+                            font-family: Consolas, Monaco, monospace;
+                            margin-bottom: 10px;
+                            height: 54px;
+                            padding: 4px;
+                            text-align: center;
+                            border-radius: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            word-break: break-all;
+                            white-space: normal;
+                            p {
+                                margin-top: 0;
+                                font-size: 16px;
+                            }
+                        }
+                        // .presale_menu_more {
+                        //     position: absolute;
+                        //     bottom: 0;
+                        //     right: 1px;
+                        // }
+                    }
+                }
+            }
+        }
+        .presale_ri_hidden {
+            width: 0;
+        }
+    }
+    .number_count {
+        width: 126px;
+        height: 40px;
+        background: #F9F9F9;
+        border: 1px solid #E4E4E4;
+        border-radius: 5px;
+        i, span {
+            float: left;
+            height: 38px;
+            line-height: 38px;
+            font-size: 16px;
+        }
+        i {
+            width: 35px;
+        }
+        span {
+            width: 54px;
+            color: @color;
+            background: #FFF;
+            border-left: 1px solid #E4E4E4;
+            border-right: 1px solid #E4E4E4;
+        }
+    }
+}
+
+.presale_edit_good {
+    .ant-modal-content {
+        min-height: 660px;
+    }
+    .ant-modal-header {
+        background: @bgColor;    //zb
+        text-align: center;
+        .ant-modal-title {
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+    .ant-modal-body {
+        background: #F9F9F9;
+        padding: 0;
+        i.anticon-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            font-size: 38px;
+            padding: 6px;
+        }
+        .ant-alert.ant-alert-no-icon {
+            font-size: 18px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .ant-form {
+            padding-top: 10px;
+            min-height: 500px;
+            max-height: 550px;
+            overflow-y: auto;
+        }
+        .ant-row.ant-form-item {
+            margin: 0;
+            height: 60px;
+            line-height: 60;
+            font-size: 20px;
+            label {
+                font-size: 20px;
+            }
+            input {
+                font-size: 20px;
+                color: @color;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+    .ant-modal-footer {
+        text-align: center;
+        padding: 20px;
+        .ant-btn {
+            width: 218px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 32px;
+            //background: #363646;  //zb
+            border-radius: 8px;
+        }
+    }
+}
+
+.presale_choose_goods {
+    .ant-modal-title {
+        font-size: 18px;
+        line-height: 18px;
+        i {
+            float: right;
+        }
+    }
+    table {
+        width: 652px;
+    }
+}
+
+.presale_search_bill {
+    .ant-modal-header {
+        padding: 0;
+        background: @bgColor;    //zb
+        text-align: center;
+        .ant-modal-title {
+            height: 50px;
+            line-height: 50px;
+            font-size: 24px;
+            //background: @bgColor;   //zb
+            position: relative;
+            color: #fff;
+            i {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 35px;
+            }
+        }
+    }
+    .ant-modal-body,.ant-modal-footer {
+        background: #F9F9F9;
+    }
+    .ant-modal-footer {
+        height: 75px;
+        padding-top: 10px;
+        border: 0;
+        .del_col {
+            text-align: left;
+            i {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+            button {
+                background: #F2F2F2;
+            }
+        }
+        button {
+            width: 150px;
+            height: 46px;
+            font-size: 18px;
+        }
+        .cancel_button {
+            //border-color: #363646;    //zb
+            //color: #363646;   //zb
+            background: #F9F9F9;
+        }
+    }
+    .scan_bill {
+        margin-bottom: 20px;
+        font-size: 18px;    //zb
+        input {
+            margin-left: 10px;
+            width: 300px;
+            height: 40px; //zb
+            font-size: 18px; //zb
+        }
+    }
+    .content {
+        font-size: 16px;
+        height: 400px;
+        .table_head {
+            background: #eaeaea;    //zb
+            height: 38px;
+            line-height: 38px;
+            overflow-y: scroll;
+            a {
+                color: @color;
+            }
+            //border-top-left-radius: 10px; //zb
+            //border-top-right-radius: 10px; //zb
+        }
+        .table_body {
+            height: 362px;
+            background: #fff;
+            overflow-y: scroll;
+            //border-bottom-left-radius: 10px; //zb
+            //border-bottom-right-radius: 10px; //zb
+            .ant-row {
+                height: 52px;
+                line-height: 52px;
+                border-bottom: 1px solid #EAEAEA;
+                box-sizing: border-box;
+                //border-radius: 10px;    //zb
+            }
+            .expand_list {
+                position: relative;
+                i {
+                    position: absolute;
+                    top: 2px;   //zb
+                    right: 0;
+                    font-size: 18px;
+                    width: 52px;
+                    height: 52px;
+                    line-height: 52px;
+                }
+                .selected {
+                    background: #c7fbf2;    //zb
+                }
+                .hovered {
+                    //background: #fff;   //zb
+                    //color: #fff;  //zb
+                    border: 1px solid @secondColor; //zb
+                    border-radius: 10px;    //zb
+                    height: 54px;   //zb
+                    box-shadow: @boxShadow; //zb
+                }
+                .expand_content {
+                    background: #f5f5f5;    //zb
+                    font-size: 16px;
+                    color: #666;
+                    line-height: 45px;
+                    padding: 0 50px 0 130px;
+                    .expand_detail_title{
+                        color: @fontColor;
+                    }
+                    .expand_detail {
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: right;
+                        overflow: hidden;
+                        :nth-child(1) {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+        .ant-row {
+            text-align: left;
+            .ant-checkbox {
+                display: inline;
+            }
+            >:nth-child(1), >:nth-child(2) {
+                text-align: center;
+            }
+            >:nth-child(2) {
+                padding-right: 20px;
+            }
+            .ant-checkbox-wrapper {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+.vipCard {
+    top: 228px;
+    p {
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+        font-size: 30px;
+    }
+    .ant-modal-body {
+        padding: 0 0 20px 0;
+    }
+    .ant-confirm-title {
+        text-align: center;
+        color: #fff;
+        background-color: #000;
+        line-height: 40px;
+        font-size: 28px;
+    }
+    .ant-confirm-content {
+        height: 200px;
+        margin: 0;
+    }
+    .ant-confirm-btns {
+        float: none;
+        .ant-btn {
+            display: block;
+            width: 50%;
+            margin: auto;
+        }
+    }
+}
+
+.presale_copy_bill {
+    .ant-modal-header {
+        background: @bgColor;   //zb
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        padding: 0;
+        .ant-modal-title {
+            color: #fff;
+            font-size: 26px;
+            line-height: 50px;
+        }
+    }
+    .ant-modal-body {
+        background: #f9f9f9;
+        padding: 22px 40px 22px 40px;
+        height: 180px;   //zb
+        i.anticon-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            font-size: 38px;
+            padding: 6px;
+        }
+        .ant-row {
+            .ant-form-item {
+                .ant-form-item-label {
+                    line-height: 50px;
+                    label {
+                        font-size: 20px;
+                        padding-bottom: 10px;
+                    }
+                }
+                input {
+                    font-size: 20px;
+                    color: @color;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    .ant-modal-footer {
+        text-align: center;
+        padding: 20px;
+        div {
+            button {
+                width: 150px;
+                height: 50px;
+                font-size: 22px;
+                //border-radius: 8px;   //zb
+                margin: 0 20px;
+                //border-color: @mainColor;   //zb
+                //color: @mainColor;  //zb
+            }
+            .ant-btn-primary {
+                //color: #fff;    //zb
+                //background: #363646;   //zb
+            }
+        }
+    }
+}
+
+.presale_pop_dropdowm {
+    background: #FcFcFc;
+    .ant-dropdown-menu-item {
+        color: @color;
+    }
+}
+.ant-dropdown {
+    z-index: 9;
+}
+
+.drawer-info-modal {
+    p {
+        font-size: 26px;
+        line-height: 80px;
+        i {
+            color: @color;
+            font-size: 28px;
+            margin-right: 15px;
+        }
+    }
+}

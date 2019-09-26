@@ -1,0 +1,144 @@
+@color: #C6539B;
+@fontColor: #2A2939;
+@borderColor: #EAEAEA;
+
+.presale_vip_find {
+  .ant-modal-header {
+    background: #363646;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 0;
+    .ant-modal-title {
+      color: #fff;
+      font-size: 26px;
+      line-height: 50px;
+    }
+  }
+  .ant-modal-body {
+    background: #f9f9f9;
+    padding: 22px 25px 22px 25px;
+    display: flex;
+    min-height: 520px;
+    .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+      font-size: 16px;
+    }
+    i.anticon-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+      font-size: 38px;
+      padding: 6px;
+    }
+    .vip_find {
+      flex: 1;
+      border-right: 1px solid #ccc;
+      padding-right: 20px;
+      .swipe_card {
+        font-size: 22px;
+        text-align: center;
+        padding: 100px 0;
+      }
+      .ant-form {
+        margin-top: 50px;
+        .ant-row {
+          .ant-form-item {
+            margin-bottom: 35px;
+            .ant-form-item-label {
+              line-height: 50px;
+              label {
+                font-size: 20px;
+                padding-bottom: 10px;
+              }
+            }
+            input {
+              font-size: 20px;
+              color: @color;
+              line-height: 40px;
+            }
+          }
+          .ant-btn {
+            width: 100px;
+            height: 45px;
+            font-size: 20px;
+            background: #363646;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+    .vip_detail {
+      flex: 1.7;
+      padding-left: 30px;
+      .ant-row {
+        font-size: 18px;
+        line-height: 35px;
+      }
+      .vip_jf {
+        //display: flex;
+        ul {
+          //display: inline-block;
+          border: 1px solid #ccc;
+          width: 480px;
+          height: 90px;
+          overflow: auto;
+          margin-top: 8px;
+          li {
+            padding-left: 10px;
+            white-space:nowrap;
+            .vip_bonusPoint {
+              color: @color;
+              margin: 0 8px;
+            }
+          }
+        }
+        button {
+          margin: 5px 0;
+          border-color: @color;
+          color: @color;
+          border-radius: 5px;
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+    .vip_empty {
+      flex: 1.5;
+      font-size: 22px;
+      text-align: center;
+      padding: 155px 0;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  .ant-modal-footer {
+    padding: 15px 8px;
+    text-align: center;
+    button {
+      width: 150px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 5px;
+      border-color: #333;
+    }
+  }
+}
+
+.presale_vip_jfDtail {
+  .ant-table {
+    font-size: 18px;
+  }
+  .ant-modal-footer {
+    padding: 15px 8px;
+    text-align: center;
+    button {
+      width: 100px;
+      height: 40px;
+      font-size: 18px;
+      border-radius: 5px;
+      border-color: #333;
+    }
+  }
+}

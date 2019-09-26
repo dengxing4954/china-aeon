@@ -1,0 +1,494 @@
+@color: #C6539B;
+//支付主界面
+.invoice {
+  display: flex;
+  flex: 1;
+  .cash_payleft {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    .ant-layout {
+      background-color: #FFFFFF;
+    }
+    .header {
+      background-color: #FFFFFF;
+      .invoice_le_reload {
+        float: right;
+        padding-right: 10px;
+        i {
+          color: @color;
+          font-size: 24px;
+        }
+      }
+      .syy {
+        font-size: .19rem;
+        color: #9B9BA7;
+        text-align: center;
+        padding-top: .1rem;
+        font-weight: 580;
+      }
+      .hy {
+        margin-left: 20px;
+        background: #BE4C94;
+        border-radius: 8px 8px 0 0;
+        width: 2.8rem;
+        height: .8rem;
+        color: #FFFFFF;
+        padding: 0 .2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: .18rem;
+        float: left;
+        p {
+          margin: 0;
+          padding-bottom: .05rem;
+        }
+      }
+    }
+    .con {
+      display: flex;
+      flex: 1;
+      overflow: auto;
+      background-color: #F1F1F1;
+      border-radius: 0 3px 3px 0;
+      .goodslist {
+        width: 100%;
+        background-color: #F9F9F9;
+        margin-right: 4px;
+        font-size: .16rem;
+        border-right: 1px solid #D7D7D7;
+        .ant-spin-nested-loading {
+          .ant-list-item {
+            padding: 10px 20px;
+            background: #FFFFFF;
+            border: 1px solid #EAEAEA;
+            border-right: 1px solid #FFFFFF;
+            border-bottom: 0;
+            box-shadow: inset 0 1px 3px 0 rgba(255, 255, 255, 0.50);
+            .del {
+              position: absolute;
+              top: 0;
+              left: 0;
+              font-size: 20px;
+              background-color: #BE4C94;
+              width: 28px;
+              height: 28px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding-right: 8px;
+              border-radius: 0 0 35px 0;
+              color: #fff;
+            }
+            .ant-list-item-meta {
+              flex: 1;
+            }
+          }
+          &:last-child {
+            border-bottom: 1px solid #EAEAEA;
+          }
+        }
+        .bold, .ant-list-item-meta-description {
+          font-weight: 590;
+          font-size: .18rem;
+          color: #2A2939;
+        }
+        .right {
+          text-align: right;
+        }
+        .ant-list-item-meta {
+          flex: 2;
+        }
+        .ant-list-item-content {
+          flex: 1;
+        }
+      }
+    }
+    .fdtl {
+      min-height: 1.5rem;
+      padding: 10px 20px;
+      color: #2A2939;
+      border: 1px solid #D7D7D7;
+      background-color: #FFFFFF;
+      font-size: .16rem;
+      font-weight: 600;
+      display: flex;
+      margin-right: 5px;
+      .ant-row {
+        flex: 1;
+        .ant-col-12 {
+          flex: 1;
+          width: 50%;
+          height: 100%;
+        }
+        .left {
+          display: flex;
+          flex-direction: column;
+          p {
+            flex: 1;
+            margin: 0;
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          text-align: right;
+          p {
+            margin: 0;
+          }
+          b {
+            font-size: .3rem;
+            color: #2A2939;
+          }
+        }
+      }
+    }
+  }
+  .cash_payright {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    .row {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+    .payconsoleCnt {
+      padding: .2rem;
+      height: 75%;
+      overflow: hidden;
+      display: flex;
+      background: #F9F9F9;
+      border: 1px solid #D7D7D7;
+      p.title {
+        font-size: 18px;
+        color: #666666;
+        margin-bottom: 0px;
+      }
+      .paymode {
+        height: 40%; /* height: 35%; */
+        /* overflow: auto; */
+        .paylist {
+          .icon {
+            background: #FFFFFF;
+            border: 1px solid #EAEAEA;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 1.3rem;
+            height: .6rem;
+            margin: 10px 0;
+          }
+          .title {
+            font-size: .18rem;
+            font-weight: 600;
+          }
+        }
+      }
+      .ant-layout-sider-children {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+      .paymodeAll {
+        flex: 1;
+      }
+      .payconsolelay {
+        display: flex;
+        flex: 1;
+        background-color: #F9F9F9;
+      }
+      .payconsole {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        .paydetail {
+          height: 60%; /* height: 45%; */
+          padding: .1rem 0 .1rem 0;
+          display: flex;
+          flex-direction: column;
+          div.title {
+            display: flex;
+            flex-direction: row;
+            padding-right: .2rem;
+            font-size: 18px;
+            color: #666666;
+            margin-bottom: 6px;
+            p {
+              flex: 1;
+            }
+            div {
+              width: 70px;
+            }
+          }
+          .paylist {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: auto;
+            .payDetailItem {
+              width: 100%;
+              min-height: .4rem;
+              display: flex;
+              flex-direction: row;
+              font-size: .16rem;
+              font-weight: 600;
+              color: black;
+              p {
+                flex: 1;
+                margin-bottom: 0;
+              }
+              div.del {
+                width: 70px;
+                text-align: right;
+                .sc {
+                  display: block;
+                  font-size: .14rem;
+                  font-weight: 500;
+                  padding-right: 20px;
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .payctr {
+      height: 25%;
+      padding: .1rem .2rem;
+      font-size: .18rem;
+      color: black;
+      p {
+        margin-bottom: .1rem;
+      }
+      .payctrrow {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        .paymess {
+          display: flex;
+          flex-direction: row;
+          p {
+            flex: 1;
+            font-size: .18rem;
+            color: #666666;
+          }
+          .num {
+            font-weight: 600;
+            color: #2A2939;
+            font-size: .3rem;
+          }
+        }
+        .buttons {
+          display: flex;
+          justify-content: flex-end;
+          .res {
+            color: #2A2939;
+            background-color: #FFFFFF;
+            margin-right: .2rem;
+            border: 1px solid #363646
+          }
+          .sub {
+            background-color: #363646;
+            color: #FFFFFF;
+          }
+          .res, .sub {
+            width: 1.8rem;
+            height: .5rem;
+            font-size: .18rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.zlzz-confirm {
+  top: 296px;
+  .ant-confirm-body-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .ant-confirm-btns {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10px 0;
+      .ant-btn {
+        font-size: 18px;
+        width: 150px;
+        height: 50px;
+      }
+    }
+  }
+  .ant-confirm-body {
+    .anticon-question-circle {
+      display: none;
+    }
+    .ant-confirm-content {
+      font-size: 30px;
+      font-weight: 600;
+      margin-left: 0;
+      margin-bottom: 10px;
+      font-weight: bold;
+      .zlje{
+        color: #C6539B;
+        font-size: 35px;
+      }
+      .quan{
+        font-size: 22px;
+      }
+      .quan_center{
+        margin-top: 10px;
+        font-size: 22px;
+      }
+    }
+  }
+  .ant-confirm-body > .anticon {
+    font-size: 28px;
+  }
+}
+
+.octoAVDInfo {
+  font-size: 18px;
+  font-family: 'Curier New', Courier, monospace, Arial, Helvetica, sans-serif;
+  .label {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+  }
+  .value {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+  }
+}
+
+.octoTipInfo {
+  top: 120px;
+  .ant-confirm-body .ant-confirm-title {
+    font-size: 20px;
+  }
+  .ant-confirm-body > .anticon {
+    font-size: 28px;
+  }
+  .ant-confirm-btns {
+    display: inline-block;
+  }
+  .ant-confirm-content {
+    font-size: 24px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .en {
+    margin-top: 20px;
+  }
+  .cn {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+.octoTipInfoNoBtn {
+  top: 120px;
+  .ant-confirm-body .ant-confirm-title {
+    font-size: 20px;
+  }
+  .ant-confirm-body > .anticon {
+    font-size: 28px;
+  }
+  .ant-confirm-btns {
+    display: none;
+  }
+  .ant-confirm-content {
+    font-size: 24px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .en {
+    margin-top: 20px;
+  }
+  .cn {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+.octoWaiting {
+  top: 280px;
+  .ant-confirm-body .ant-confirm-title {
+    font-size: 20px;
+    // line-height: 25px;
+  }
+  .ant-confirm-body > .anticon {
+    font-size: 28px;
+  }
+  .ant-confirm-btns {
+    display: none;
+  }
+  .ant-confirm-content {
+    font-size: 24px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+.xjzl {
+  top: 296px;
+  .ant-modal-body {
+    padding: 20px;
+  }
+  .ant-confirm-body {
+    .anticon-check-circle {
+      display: none;
+    }
+    .ant-confirm-title {
+      font-size: 30px;
+    }
+    .ant-confirm-content {
+      font-size: 30px;
+      font-weight: 600;
+      word-wrap: break-word;
+      word-break: break-all;
+      p {
+        margin-bottom: 10px;
+      }
+      .zlje{
+        color: #C6539B;
+        font-size: 35px;
+      }
+      .ti{
+        font-size: 30px;
+      }
+    }
+  }
+  .ant-confirm-body > .anticon {
+    font-size: 28px;
+  }
+  .ant-btn {
+    font-size: 18px;
+    width: 150px;
+    height: 50px;
+  }
+}
+.message-invoice{
+  .ant-modal-body {
+    padding: 45px 50px;
+    .ant-confirm-title {
+      font-size: 22px;
+    }
+  }
+  .ant-confirm-btns {
+    display: none;
+  }
+}

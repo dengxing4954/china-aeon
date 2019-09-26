@@ -1,0 +1,163 @@
+@import '../../../common/style/common.less';
+
+@bgDark: #363646;
+@actColor: #BE4C94;
+
+.center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fontSty() {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #2A2939;
+}
+
+.btn(@w: 0; @h: 0;) {
+    background-color: @bgDark;
+    color: #fff;
+    font-size: 12px;
+    width: @w;
+    height: @h;
+}
+
+.midwaytransfer {
+    font-family: MicrosoftYaHei;
+    font-weight: normal;
+    font-stretch: normal;
+    .ant-modal-content {
+        overflow: hidden;   //zb
+    }
+    .mian_head {
+        line-height: 50px;
+        background: @bgColor;   //zb
+        font-size: 23px;
+        color: #ffffff;
+        text-align: center;
+        img {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .date_time {
+        padding: 16px 0 0 48px;
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #999999;
+        line-height: 20px;
+        background-color: #F9F9F9;
+    }
+    .mian_content {
+        height: 520px;
+        background-color: #F9F9F9;
+        display: flex;
+        flex-direction: row;
+        .left_section {
+            flex: 1.25;
+            margin: 9px 0 28px 28px;
+            .content {
+                .table_head {
+                    padding-left: 20px;
+                    line-height: 38px;
+                    .fontSty();
+                    background-color: #C8C8C8;
+                    text-align: center;
+                    :nth-child(4) {
+                        padding-right: 20px;
+                    }
+                }
+                .table_conent {
+                    height: 395px;
+                    background-color: #FFFFFF;
+                    border: 1px solid #EAEAEA;
+                    padding-top: 8px;
+                    padding-left: 20px;
+                    .fontSty();
+                    text-align: center;
+                    .ant-row {
+                        padding-top: 5px;
+                    }
+                }
+            }
+            .table_foot {
+                margin-top: 20px;
+            }
+        }
+        .right_section {
+            flex: 1;
+            .content {
+                max-height: 450px;
+                font-size: 16px;
+                background-color: #F9F9F9;
+                overflow-y: auto;
+                overflow-x: hidden;
+                ::-webkit-scrollbar {
+                    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+                    height: 4px;
+                    display: none;
+                }
+                .entry_data {
+                    padding: 10px 10px 10px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: PingFangSC-Regular;
+                    font-size: 20px;
+                    color: #2A2939;
+                    line-height: 24px;
+                    > .label {
+                        margin-left: 13px;
+                        width: 90px;
+                        text-align: left;
+                        font-family: PingFangSC-Regular;
+                        font-size: 20px;
+                        color: #2A2939;
+                        line-height: 24px;
+                    }
+                    > .ipt_msg {
+                        margin-top: 5px;
+                        .inp {
+                            border-radius: 4px;
+                            margin-left: 15px;
+                            height: 40px;
+                            width: 195px;
+                            padding-left: 20px;
+                            background-color: #fff;
+                            background-image: none;
+                            border: 1px solid #ccc;
+                            &:focus {
+                                background: #FFFFFF;
+                                border: 1px solid @actColor;
+                                color: @actColor;
+                            }
+                        }
+                        > span {
+                            padding-right: 15px;
+                            color: #999999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .foot {
+        position: absolute;
+        right: 15%;
+        bottom: 25px;
+        .btn {
+            background-color: @bgDark;
+            color: #fff;
+            font-size: 18px;
+            width: 150px;
+            height: 40px;
+            border-radius: 4px;
+            &:active {
+                background-color: #000;
+            }
+        }
+    }
+}

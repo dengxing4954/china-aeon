@@ -1,0 +1,91 @@
+@import '../../../common/style/common.less';
+
+@color: @secondColor;
+@fontColor: #2A2939;
+@borderColor: #EAEAEA;
+
+.uploadLog {
+    .ant-modal-header {
+        background: @bgColor;   //zb
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        padding: 0;
+        .ant-modal-title {
+            color: #fff;
+            font-size: 26px;
+            line-height: 50px;
+        }
+    }
+    .ant-modal-body {
+        background: #f9f9f9;
+        padding: 22px 25px 22px 25px;
+        height: 520px;
+        overflow: auto;
+        .uploadLog_body {
+            display: flex;
+            .uploadLog_le {
+                flex: 1;
+                padding: 0 10px;
+            }
+            .uploadLog_ri {
+                flex: 1;
+                height: 450px;
+                margin-left: 30px;
+                input {
+                    margin-bottom: 30px;
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 50px;
+                    padding: 0 20px;
+                }
+                ul {
+                    li {
+                        span {
+                            &:first-child {
+                                float: left;
+                            }
+                            &:last-child {
+                                float: right;
+                                color: @fontColor3;
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                li {
+                    background: #fff;
+                    line-height: 50px;
+                    height: 50px;
+                    font-size: 18px;
+                    padding: 0 20px;
+                    border-bottom: 1px solid #ccc;
+                }
+                .selected {
+                    color: @color;
+                }
+            }
+            ul.selected {
+                border: 1px solid @mainColor;
+                box-shadow: @boxShadow;
+            }
+        }
+    }
+    .ant-modal-footer {
+        padding: 15px 8px;
+        text-align: center;
+        button {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 5px;
+            border-color: #363646;
+            margin: 0 10px;
+        }
+        .ant-btn-primary {
+            background: #363646;
+        }
+    }
+}

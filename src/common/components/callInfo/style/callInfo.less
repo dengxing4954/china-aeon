@@ -1,0 +1,34 @@
+@import '../../../style/common.less'; //zb
+@color: @mainColor; //zb
+.callInfo {
+    .ant-modal-header {
+        background: @bgColor;   //zb
+        color:#fff; //zb
+        padding: 10px 24px; //zb
+    }
+    .ant-modal-title {
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff; //zb
+    }
+    .ant-modal-content {
+        .ant-modal-body {
+            padding: 16px 24px;
+            .selected {
+                color: @color;
+            }
+            .ant-radio-inner {
+                top: -2px;
+            }
+        }
+    }
+    .ant-modal-footer {
+        padding: 16px 24px;
+        .ant-btn {
+            width: 100px;
+            height: 40px;
+            line-height: 38px;
+            font-size: 18px;
+        }
+    }
+}

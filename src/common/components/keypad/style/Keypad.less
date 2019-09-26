@@ -1,0 +1,71 @@
+@import "../../../style/common.less";
+.keyPad {
+    position: fixed;
+    width: 292px;
+    height: 272px;
+    // padding: 6px;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: #fbfbfb;
+    //border: 1px solid #e0e0e0;
+    box-shadow: @boxShadow;
+    border-radius: 14px;
+    .keyPad_le {
+        width: 221px;
+    }
+    .keyPad_ri {
+        width: 70px;
+    }
+    div {
+        float: left;
+        button {
+            padding: 0;
+            width: 65px;
+            height: 60px;
+            line-height: 60px;
+            box-sizing: border-box;
+            border: 1px solid #e4e2e2;
+            font-size: 18px;
+            border-radius: 12px;
+            margin: 4px;
+        }
+        .user_button {
+            font-size: 20px;
+        }
+        .clear_button {
+            color: #fff;
+            background: @redColor;
+        }
+        .back_button {
+            color: #fff;
+            background: @mainColor;
+        }
+        .ok_button {
+            color: #fff;
+            height: 128px;
+            background: @secondColor;
+        }
+    }
+    .clearfix{
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+    }
+    // .ant-row>div {
+    //     padding:2px;
+    // }
+    // button {
+    //     padding: 0;
+    //     width: 100%;
+    //     height: 55px;
+    //     border: 1px solid #d9d9d9;
+    //     border-radius: 5px;
+    //     color: #C6539B;
+    //     span{
+    //         text-align: center;
+    //     }
+    // }
+}

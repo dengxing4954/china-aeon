@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body style="background: url(./assets/initialize.png) no-repeat;background-size: 100%;">
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+    <h1 id="tip" style="position: absolute; width: 100%; left: 0; bottom: 0px; text-align: center; color: #1a86f5;">初始化中！</h1>
+</body>
+<script>
+    // require('./renderer.js');
+    const { ipcRenderer } = require('electron');
+
+    ipcRenderer.on('Update', function(event, data) {
+        document.getElementById("tip").innerHTML = "更新中！請耐心等待！";
+    });
+
+</script>
+
+</html>

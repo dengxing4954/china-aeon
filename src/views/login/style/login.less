@@ -1,0 +1,94 @@
+@import '../../../common/style/common.less';
+@border: 2px solid #20e1ad;
+@btnColor: @bgColor;
+.login {
+    display: flex;
+    flex: 1;
+
+    &>div {
+        display: flex;
+        flex: 1;
+    }
+
+    .layout {
+        background-color: #FFFFFF;
+    }
+
+    .header {
+        background-color: #FFFFFF;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 2.6rem;
+        }
+    }
+
+    .con {
+        height: 60%;
+
+        .conbox {
+            height: 100%;
+        }
+
+        .content {
+            height: 100%;
+            width: 450px;
+
+            // .item1 {
+            //     height: 0.45rem;
+
+            //     input {
+            //         padding-left: .5rem;
+            //         font-size: 20px;
+            //     }
+            // }
+
+            .subbtn {
+                width: 100%;
+                height: 60px;
+            }
+        }
+
+        .ant-select {
+            width: 100%;
+        }
+    }
+
+    .cardbind {
+        float: right;
+    }
+
+    .ver {
+        position: absolute;
+        width: 100%;
+        padding-right: 10px;
+        left: 0;
+        bottom: 0;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    .poweroff {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: black;
+    }
+
+    .systemConfig_icon {
+        font-size: 36px;
+        position: absolute;
+        top: 65px;
+        right: 16px;
+    }
+
+    &>.systemConfig {
+        width: 0;
+        flex: 0;
+    }
+}
+

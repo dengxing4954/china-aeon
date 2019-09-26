@@ -1,0 +1,4 @@
+[
+    { "dec": "POS配置文件", "path": "../javaPos.ConfigFile/System.ini" },
+    { "dec": "PRINTER配置文件", "path": "../javaPos.ConfigFile/Config.ini" }
+]

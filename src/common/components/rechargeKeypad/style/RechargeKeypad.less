@@ -1,0 +1,131 @@
+@import "../../../style/common.less";
+.rechargeKeypad {
+    top: 80px;
+    .ant-modal-header {
+        background: @bgColor;   //zb
+        text-align: center;
+        position: relative;
+        .ant-modal-title {
+            color: #fff;
+            font-size: 20px;
+            /*i {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                font-size: 35px;
+            }*/
+        }
+    }
+    .ant-modal-body {
+        width: 100%;
+        padding: 0;
+        background-color: #F9F9F9;
+        .ant-alert.ant-alert-no-icon {
+            padding: 8px 18px;
+            font-size: 16px;
+        }
+        .tabSelect {
+            padding: 15px 15px 0 15px;
+            label {
+                height: 38px;
+                line-height: 36px;
+            }
+            :first-child {
+                border-radius: 5px 0 0 5px;
+            }
+            :last-child {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+        .numInput {
+            padding: 15px 15px 5px 15px;
+            width: 100%;
+            font-weight: 500;
+            span,input {
+                display: block;
+                padding: 0 10px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                text-align: right;
+                //border: 1px solid #d9d9d9;
+                //border-radius: 4px;   //zb
+                background: #fff;
+            }
+        }
+        .errMessage {
+            height: 20px;
+            text-align: right;
+            line-height: 20px;
+            padding: 0 18px;
+            color: #f5222d;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .kaypad {
+            background: #f9f9f9;
+            padding: 15px 6px 25px 6px;
+            display: flex;
+            justify-content: center;
+            .kaypad_self {
+                width: 83px;
+            }
+            .kaypad_le {
+                width: 251px;
+            }
+            .kaypad_ri {
+                width: 85px;
+            }
+            div {
+                float: left;
+                button {
+                    padding: 0;
+                    width: 75px;
+                    height: 70px;
+                    line-height: 60px;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    border-radius: 12px;
+                    margin: 4px;
+                }
+                .clear_button {
+                    color: #fff;
+                    background: @redColor;
+                }
+                .back_button {
+                    color: #fff;
+                    background: @mainColor;
+                }
+                .ok_button {
+                    color: #fff;
+                    height: 147px;
+                    background: @secondColor;
+                }
+            }
+            .clearfix {
+                content: " ";
+                visibility: hidden;
+                display: block;
+                height: 0;
+                clear: both;
+            }
+        }
+    }
+    .ant-modal-footer {
+        padding: 15px 8px;
+        text-align: center;
+        button {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            //border-radius: 5px;   //zb
+            //border-color: @secondColor;   //zb
+        }
+    }
+}
+.rechargeKeypad_keyControl {
+    top: 200px;
+    .ant-modal-body {
+        padding: 25px 10px;
+    }
+}

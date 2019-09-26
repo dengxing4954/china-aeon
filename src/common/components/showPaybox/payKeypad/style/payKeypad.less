@@ -1,0 +1,56 @@
+@import "../../../../style/common.less";
+
+.keypad{
+  display: flex;
+  flex-direction: row;
+  .up, .down{
+    height: 144px;
+    width: 360px;
+    button{
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+  .right{
+    display: flex;
+    flex-direction: column;
+    button{
+      font-size: 24px;
+      text-align: center;
+      margin-right: 15px;
+    }
+  }
+  .fixed_button{
+    width: 90px;
+    height: 72px;
+    line-height: 72px;
+    background: #FFFFFF;
+    img{
+      width: 36.1px;
+      height: 20.5px;
+    }
+  }
+  .zero_button{
+    width: 180px;
+    height: 72px;
+    line-height: 72px;
+    background: #FFFFFF;
+  }
+  .ok_button{
+    width: 90px;
+    height: 144px;
+    line-height: 144px;
+    background: #363646;
+    span{
+      color: #FFFFFF;
+    }
+  }
+  .dian{
+    font-weight: 800;
+  }
+  .down_left{
+    width: 270px;
+    height: 144px;
+    float: left;
+  }
+}

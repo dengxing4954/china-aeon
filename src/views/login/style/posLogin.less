@@ -1,0 +1,172 @@
+.login-container {
+    width: 1024px;
+    background-color: white;
+
+    &.login-scanner-background {
+        background-image: url('../../../common/image/scanner-background.png');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100% 331px;
+
+        > .login-box {
+            width: 520px;
+            margin: 120px auto;
+            background-color: white;
+            height: 476px;
+            opacity: 1;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+
+            > .login-header {
+                padding-top: 30px;
+                > div {
+                    img {
+                        width: 80px;
+                        height: 26px;
+                    }
+                }
+            }
+            > .login-body{
+                margin-top: 30px;
+            }
+            > .login-card-tip {
+            width: 520px;
+             height: 68px;
+             line-height: 68px;
+             justify-content: center;
+             align-items: center;
+             background-color: rgba(249, 249, 249, 1);
+         }
+        }
+        
+    }
+    
+    > .login-box {
+        width: 400px;
+        height: 450px;
+        margin: 120px auto;
+        position: relative;
+
+        > .login-header,
+        > .login-body {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        > .login-header {
+            > div {
+                text-align: center;
+                >img {
+                    width: 160px;
+                    height: 52px;
+                }
+            }
+            > p {
+                text-align: center;
+                font-size: 20px;
+                color: #333333;
+                margin-top: 16px;
+                height: 24px;
+                line-height: 24px;
+            }
+        }
+        > .login-body{
+            margin-top: 60px;
+
+            > .login-account {
+                .login-form-item {
+                    width: 400px;
+                    height: 60px;
+                    border-radius: 4px;
+                    margin-bottom: 28px;
+                    position: relative;
+                    padding: 0;
+
+                    > img {
+                        position: absolute;
+                        top: 18px;
+                        left: 24px;;
+                        width: 24px;
+                        height: 24px;
+
+                    }
+                    > input {
+                        background-color: rgba(242, 242, 242, 1);
+                        width: 100%;
+                        height: 100%;
+                        padding: 14px 30px 14px 68px;
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: rgba(242, 242, 242, 1);
+                        font-size: 20px;
+                    }
+                    input.focus {
+                        background-color: white;
+                        border-color: #b13b89;
+                    }
+                    > button {
+                        width: 100%;
+                        height: 60px;
+                        text-align: center;
+                        border: none;
+                        color: white;
+                        border-radius: 4px;
+                        opacity: 1;
+
+                        &.login-btn-active {
+                            background: rgba(177,59,137,1);
+                            box-shadow: 0px 4px 12px 0px rgba(177,59,137,0.33);
+                        }
+                        &.login-btn-disabled {
+                            background: rgba(129,136,150,1);
+                            box-shadow: 0px 4px 12px 0px rgba(129,136,150,0.33);
+                        }
+                    }
+                }
+
+            }
+            > .login-swipe {
+
+                > div {
+                    text-align: center;
+                    > img {
+                        width: 240px;
+                        height: 240px;
+                    }
+                }
+                // > p, >button {
+                //     text-align: center;
+                //     margin-top: 20px;
+                //     font-size: 16px;
+                // }
+                > button {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    background-color: white;
+                    outline: none;
+                    margin-top: 20px;
+                    font-size: 16px;
+                    border: none;
+                }
+            }
+        }
+        > .login-card-tip {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            text-align: center;
+            color: #b13b89;
+            font-size: 16px;
+            margin: 0 auto;
+            
+
+            > img {
+                width: 32px;
+                height: 19px;
+                margin-right: 20px;
+            }
+    }
+    }
+    
+}

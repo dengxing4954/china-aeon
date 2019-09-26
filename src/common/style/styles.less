@@ -1,0 +1,1058 @@
+@import "./common.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    color: rgb(1, 1, 1);
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    /* cursor: url("../image/cursor.ico"), pointer !important;
+    input, a, .ant-btn, .ant-btn.disabled, .ant-select-selection--single, .ant-tabs-nav .ant-tabs-tab,
+    .ant-select-dropdown-menu-item, .ant-radio-button-wrapper, .ant-checkbox, .ant-switch{
+        cursor: url("../image/cursor.ico"), pointer;
+    } */
+}
+
+@font-face {
+    font-family: 'anticon';
+    src: url('../iconfont/iconfont.eot');
+    /* IE9*/
+    src: url('../iconfont/iconfont.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.ttf') format('truetype'), /* iOS 4.1- */
+    url('../iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+input {
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #585858;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+html {
+    @media screen and (min-width: 500px) and (max-width: 1024px) {
+        font-size: 80px
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1152px) {
+        font-size: 100px
+    }
+    @media screen and (min-width: 1152px) and (max-width: 1280px) {
+        font-size: 130px
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1366px) {
+        font-size: 140px
+    }
+    @media screen and (min-width: 1366px) and (max-width: 1400px) {
+        font-size: 140px
+    }
+    @media screen and (min-width: 1400px) and (max-width: 1600px) {
+        font-size: 160px
+    }
+    @media screen and (min-width: 1600px) and (max-width: 1680px) {
+        font-size: 160px
+    }
+    @media screen and (min-width: 1680px) and (max-width: 1792px) {
+        font-size: 180px
+    }
+    @media screen and (min-width: 1792px) and (max-width: 1856px) {
+        font-size: 190px
+    }
+    @media screen and (min-width: 1856px) and (max-width: 1920px) {
+        font-size: 200px
+    }
+    @media screen and (min-width: 1920px) and (max-width: 2048px) {
+        font-size: 130px
+    }
+    @media screen and (min-width: 2048px) and (max-width: 2560px) {
+        font-size: 220px
+    }
+    @media screen and (min-width: 2560px) and (max-width: 2736px) {
+        font-size: 250px
+    }
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+}
+
+body, div, p, hr, ul, ol, li, dl, dt, dd, form, h1, h2, h3, table, tr, th, td, caption, iframe {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer {
+    height: .30rem;
+    width: 100%;
+    display: flex;
+    font: normal normal .10rem/.30rem Arial, Helvetica, sans-serif, "微软雅黑";
+    padding: 0 .30rem;
+    justify-content: space-between;
+    background: #010101;
+    color: #fff;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.footer ul li {
+    margin: 0 .1rem;
+    height: 100%;
+}
+
+.footer ul li:first-child {
+    display: flex;
+    margin-top: .035rem;
+}
+
+.footer ul li img {
+    height: .23rem;
+}
+
+.invoice_header {
+    display: flex;
+    height: .7rem;
+    background: #FFFFFF;
+    justify-content: space-between;
+    padding: 2.5% .3rem 0 .3rem;
+}
+
+.invoice_header_le {
+    height: 0.32rem;
+}
+
+.invoice_header .invoice_header_le a, .invoice_header .invoice_header_ri a {
+    width: 0.32rem;
+    height: 0.32rem;
+    display: block;
+}
+
+a.nav_left {
+    background: url(../image/home_nav1.png) no-repeat;
+    background-size: contain;
+    margin-right: .3rem;
+}
+
+.invoice_header p {
+    font: .16rem/.32rem Arial;
+    text-decoration: underline;
+}
+
+.page-appear {
+    opacity: 0.01;
+    margin-left: 100%;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.page-appear.page-appear-active {
+    margin-left: 0px;
+    opacity: 1;
+}
+
+.page-enter {
+    opacity: 0.01;
+    margin-left: 100%;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.page-enter.page-enter-active {
+    margin-left: 0px;
+    opacity: 1;
+}
+
+.page-leave {
+    opacity: 1;
+    margin-left: 0px;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.page-leave.page-leave-active {
+    margin-left: -100%;
+    opacity: 0.01;
+}
+
+.page1 {
+    position: absolute;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+}
+
+.page2 {
+    position: absolute;
+    background-color: deepskyblue;
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+}
+
+.Image {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+}
+
+.link-active {
+    color: #bbbbbb;
+    text-decoration: none;
+}
+
+.discount_details {
+    border-bottom: 2px solid #C0C0C0;
+    color: rgb(133, 133, 133);
+}
+
+.discount_details p {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font: normal normal .1rem/.13rem Verdana, Geneva, sans-serif, "微软雅黑", "Arial Unicode MS";
+}
+
+.discount_details .discount_grade {
+    color: #101010;
+}
+
+//TopMenu
+.home_left {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: -25%;
+    z-index: 100;
+    width: 25%;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5% .3rem 0 .3rem;
+    a {
+        color: #333;
+    }
+}
+
+.home_left_show {
+    left: 0;
+}
+
+.home_left_back a.back_left, .invoice_header_le .left_leave {
+    width: 0.25rem;
+    height: 0.25rem;
+    display: block;
+    background: url(~@/common/image/all_i_left.png) no-repeat;
+    background-size: contain;
+    margin-bottom: .1rem;
+}
+
+.home_left_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .home_left_m1 {
+        background: url(~@/common/image/home_i_1.png) no-repeat;
+        background-size: contain;
+    }
+    .home_left_m2 {
+        background: url(~@/common/image/home_i_2.png) no-repeat;
+        background-size: contain;
+    }
+    .home_left_m3 {
+        background: url(~@/common/image/home_i_3.png) no-repeat;
+        background-size: contain;
+    }
+    .home_left_m4 {
+        background: url(~@/common/image/home_i_4.png) no-repeat;
+        background-size: contain;
+    }
+    .home_left_m5 {
+        background: url(~@/common/image/home_i_5.png) no-repeat;
+        background-size: contain;
+    }
+}
+
+.home_left_set .home_left_m6 {
+    background: url(~@/common/image/home_i_6.png) no-repeat;
+    background-size: contain;
+}
+
+.home_left_menu li, .home_left_set li {
+    display: flex;
+    margin: 0 0 .3rem 0;
+}
+
+.home_left_set li {
+    margin-top: .3rem;
+}
+
+.home_left_menu li span, .home_left_set li span {
+    display: block;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-right: 10%;
+}
+
+.home_left_menu li a, .home_left_set li a {
+    font: normal normal .16rem/.30rem Arial, Helvetica, sans-serif, "微软雅黑";
+}
+
+//Top
+a.unfinished_left {
+    background: url(~@/common/image/sale_01.png) no-repeat;
+    background-size: contain;
+}
+
+a.pickup_goods {
+    background: url(~@/common/image/sale_02.png) no-repeat;
+    background-size: contain;
+}
+
+a.sales_return {
+    background: url(~@/common/image/sale_03.png) no-repeat;
+    background-size: contain;
+}
+
+.invoice_header_menu {
+    justify-content: space-around;
+}
+
+.invoice_header_menu a {
+    font: normal bold 0.16rem/0.3rem "微软雅黑";
+    color: #101010;
+    height: .32rem;
+}
+
+.invoice_header_menu a.on {
+    border-bottom: 4px solid #585858;
+}
+
+.invoice_header_ri {
+    justify-content: flex-end;
+}
+
+.invoice_header_ri a {
+    margin-right: .3rem;
+}
+
+.invoice_header>div {
+    display: flex;
+    flex: 1;
+}
+
+//商品图片
+.invoice_good_01 {
+    background: url(~@/common/image/goods_i_01.png) no-repeat;
+    background-size: contain;
+}
+
+.invoice_good_02 {
+    background: url(~@/common/image/goods_i_03.png) no-repeat;
+    background-size: contain;
+}
+
+.invoice_good_03 {
+    background: url(~@/common/image/goods_i_05.png) no-repeat;
+    background-size: contain;
+}
+
+.invoice_good_04 {
+    background: url(~@/common/image/goods_i_07.png) no-repeat;
+    background-size: contain;
+}
+
+//支付图片
+.invoice_ri_pay li ul img.invoice_ri_yhk {
+    background: url(~@/common/image/all_i_13.png);
+    background-size: contain;
+}
+
+.invoice_ri_pay li ul img.invoice_ri_zfb {
+    background: url(~@/common/image/all_i_07.png);
+    background-size: contain;
+}
+
+.invoice_ri_pay li ul img.invoice_ri_wx {
+    background: url(~@/common/image/all_i_09.png);
+    background-size: contain;
+}
+
+.invoice_ri_pay li ul img.invoice_ri_dj {
+    background: url(~@/common/image/all_i_15.png);
+    background-size: contain;
+}
+
+//登录图片
+.login_user_i {
+    background: url(~@/common/image/user.png) no-repeat;
+    background-size: contain;
+}
+
+.login_pwd_i {
+    background: url(~@/common/image/pwd.png) no-repeat;
+    background-size: contain;
+}
+
+//presale图片
+.add_goods {
+    background: url(~@/common/image/all_i_add.png) no-repeat;
+    background-size: contain;
+}
+
+.redu_goods {
+    background: url(~@/common/image/add_i_del.png) no-repeat;
+    background-size: contain;
+}
+
+.del_goods {
+    background: url(~@/common/image/add_i_delall.png) no-repeat;
+    background-size: contain;
+    margin-left: .15rem;
+}
+
+//销售和退货公用
+.invoice_le {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f9f9f9;
+    .invoice_le_ul {
+        display: flex;
+        flex-direction: column;
+        li {
+            display: flex;
+            width: 100%;
+            color: #010101;
+            font: normal normal .1rem/.2rem Arial, Helvetica, sans-serif, "微软雅黑";
+            padding: .06rem 0;
+        }
+        li:first-child {
+            background: #4a4a4a;
+            color: #fff;
+            height: .25rem;
+            margin-bottom: .1rem;
+            font: normal normal .13rem/.25rem Arial, Helvetica, sans-serif, "微软雅黑";
+            &~li:hover {
+                background: #ededed;
+            }
+        }
+        li>span {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+        }
+        .add_goods, .redu_goods, .del_goods {
+            display: block;
+            width: .15rem;
+            height: .15rem;
+            margin: 0 .05rem;
+        }
+        .add_goods {
+            background: url(~@/common/image/all_i_add.png) no-repeat;
+            background-size: contain;
+        }
+        .redu_goods {
+            background: url(~@/common/image/add_i_del.png) no-repeat;
+            background-size: contain;
+        }
+        .del_goods {
+            background: url(~@/common/image/add_i_delall.png) no-repeat;
+            background-size: contain;
+            margin-left: .15rem;
+        }
+        input {
+            width: .15rem;
+            height: .15rem;
+            border: 1px solid #c1c1c1;
+            text-align: center;
+        }
+        .flex-cl3 {
+            display: flex;
+            flex: 3;
+        }
+        .flex-cl3 p span {
+            font: .09rem/.13rem;
+            color: #585858;
+        }
+        .flex-cl3 img {
+            display: block;
+            width: .32rem;
+            height: .32rem;
+            margin-right: .1rem;
+        }
+        .add_product {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            p {
+                color: #777;
+                font: normal normal .13rem/.30rem Arial, Helvetica, sans-serif, "微软雅黑";
+            }
+        }
+    }
+    .invoice_total {
+        border-top: 1px solid #979797;
+        display: flex;
+        justify-content: flex-end;
+        font: normal bold .16rem/.4rem Verdana, Geneva, sans-serif, "微软雅黑", "Arial Unicode MS";
+        padding-right: .5rem;
+    }
+}
+
+.invoice_ri {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    .cap {
+        background: #4a4a4a;
+        height: .25rem;
+    }
+    form {
+        display: flex;
+        flex: 1;
+        padding: .2rem .23rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .invoice_info {
+        display: flex;
+        flex: 3;
+        ul li {
+            margin-bottom: .05rem;
+            color: #858585;
+            font: normal normal .13rem/.2rem Verdana, Geneva, sans-serif, "微软雅黑", "Arial Unicode MS";
+            label {
+                font-size: .1rem;
+            }
+            a {
+                display: block;
+                width: .2rem;
+                height: .2rem;
+            }
+        }
+        .camera_goods {
+            background: url(~@/common/image/05.png) no-repeat;
+            background-size: contain;
+        }
+        .add_job {
+            background: url(~@/common/image/06.png) no-repeat;
+            background-size: contain;
+        }
+        .mem_code {
+            background: url(~@/common/image/07.png) no-repeat;
+            background-size: contain;
+        }
+        .invoice_input {
+            display: flex;
+            height: .2rem;
+            input {
+                display: flex;
+                flex: 1;
+                margin-right: .1rem;
+                font: normal normal .13rem/.2rem Verdana, Geneva, sans-serif, "微软雅黑", "Arial Unicode MS";
+            }
+        }
+    }
+    .invoice_rb {
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+        justify-content: flex-end;
+        .invoice_bu {
+            display: flex;
+            justify-content: space-around;
+            height: .5rem;
+            li {
+                a {
+                    display: flex;
+                    color: #858585;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font: normal normal .08rem/.12rem Arial, Helvetica, sans-serif, "微软雅黑";
+                }
+                i {
+                    display: inline-block;
+                    width: .2rem;
+                    height: .2rem;
+                    margin-bottom: .03rem;
+                }
+                .invoice_zdzk {
+                    background: url(~@/common/image/sale_zk01.png) no-repeat;
+                    background-size: contain;
+                }
+                .invoice_zdzr {
+                    background: url(~@/common/image/sale_zk02.png) no-repeat;
+                    background-size: contain;
+                }
+                .invoice_gd {
+                    background: url(~@/common/image/sale_zk03.png) no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        .invoice_btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: .8rem;
+            input {
+                width: 90%;
+                border: 1px solid #010101;
+                height: .3rem;
+                font: normal normal .13rem/.3rem Arial, Helvetica, sans-serif, "微软雅黑";
+                cursor: pointer;
+            }
+            .invoice_sub {
+                background: #010101;
+                color: #fff;
+            }
+            .invoice_res {
+                background: #FFFFFF;
+                color: #010101;
+            }
+        }
+    }
+}
+
+.loading_mask {
+    width: 1024px;
+    height: 768px;
+    line-height: 768px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    .ant-spin-dot i {
+        background-color: #C6539B;
+    }
+    width: 1024px;
+    height: 768px;
+    line-height: 768px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    .ant-spin-dot i {
+        background-color: #C6539B;
+    }
+}
+
+//支付框
+.modal() {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .65);
+    height: 100%;
+    z-index: 1000;
+}
+
+.modalsec() {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalcon() {
+    position: relative;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+}
+
+.modal {
+    .modal;
+}
+
+.cashBox {
+    .modalsec;
+    .label_selected {
+        background: #FEF2FA;
+        border: 1px solid #FF77CD;
+        color: #2A2939;
+    }
+    .stockBox {
+        text-align: center;
+        p {
+            margin-bottom: 0;
+            flex: 1;
+        }
+    } //现金支付样式
+    .jykh{
+        .modalcon;
+        display: flex;
+        flex-direction: column;
+        width: 480px;
+        height: 100px;
+        .inputBox{
+            flex: 1;
+            display: flex;
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex: 1;
+                padding: 0;
+            }
+        }
+        .title {
+            font-size: 24px;
+            text-align: left;
+            line-height: 50px;
+            padding-left: .1rem;;
+            height: 50px;
+            color: #FFFFFF;
+            background-color: #363646;
+            margin-bottom: 0;
+            img {
+                width: 30px;
+                height: 30px;
+                float: right;
+                margin-right: 20px;
+                margin-top: 10px;
+            }
+        }
+        .ant-form-item{
+            margin-right: 0;
+        }
+        .xjzf {
+            flex: 1;
+            margin-bottom: 0;
+            .xjzfInput {
+                font-size: .20rem;
+                font-weight: bold;
+                color: black;
+                padding: .1rem;
+                width: 480px;
+                height: 50px;
+                border: 1px solid #BE4C94;
+            }
+        }
+        .jybutton{
+            width: 1.8rem;
+            padding: .1rem;
+            height: 50px;
+            font-size: .20rem;
+            font-weight: bold;
+            background-color: #363646;
+            color: #FFFFFF;
+        }
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+        font-size: 22px;
+    }
+    .cashBoxCon {
+        .modalcon;
+        display: flex;
+        flex-direction: column;
+        .title {
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+            height: 50px;
+            color: #FFFFFF;
+            background-color: #363646;
+            padding-left: 50px;
+            margin-bottom: 0;
+            img {
+                width: 30px;
+                height: 30px;
+                float: right;
+                margin-right: 20px;
+                margin-top: 10px;
+            }
+        }
+        .inputBox {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .inputBox_quan {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .payCard {
+            .ant-form-item-control {
+                display: flex;
+                flex-direction: row;
+                .ant-form-item-children {
+                    flex: 1;
+                    display: flex;
+                    .anticon-scan {
+                        margin-left: .15rem;
+                    }
+                }
+            }
+        }
+        .xjzf {
+            margin-bottom: 0;
+            .xjzfInput {
+                font-size: .20rem;
+                font-weight: bold;
+                color: black;
+                padding: .1rem;
+                width: 360px;
+                height: 50px;
+                border: 1px solid #BE4C94;
+            }
+        }
+    }
+    .ant-list-bordered .ant-list-item {
+        padding-left: 0px;
+        padding-right: 0px;
+        p {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .zkje {
+        flex-direction: column;
+        .ant-form-item-label {
+            text-align: left;
+            font-size: 23px;
+            color: #2A2939;
+        }
+        .ant-form-item-control-wrapper {
+            flex: 1;
+        }
+        label {
+            font-size: .18rem;
+        }
+        .ant-input-lg {
+            height: 50px;
+            font-size: .20rem;
+            font-weight: bold;
+        }
+        .ant-input-disabled {
+            color: #BE4C94;
+        }
+    }
+}
+
+//全局提示
+body .ant-message {
+    font-size: 20px;
+    line-height: 20px;
+    .ant-message-notice-content {
+        background-color: #FCFCFC;
+        padding: 35px 25px;
+        i {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+    }
+}
+
+/*.ant-modal-wrap {
+    text-align: center;
+    // white-space: nowrap;
+}
+
+.ant-modal-wrap:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+}
+
+.ant-modal-wrap .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+}*/
+
+div.vla-confirm {
+    top: 296px;
+    .ant-modal-confirm-body {
+        .ant-modal-confirm-title {
+            font-size: 20px;
+        }
+        .ant-modal-confirm-content {
+            font-size: 20px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+    }
+    .ant-modal-confirm-body>.anticon {
+        font-size: 28px;
+        color: @secondColor;
+    }
+    .ant-modal-btn {
+        min-width: 100px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .ant-modal-btn-primary {
+        background-color: #2A2939;
+    }
+}
+
+.vla-modal {
+    input {
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+    .ant-modal-modal {
+        top: 220px;
+    }
+    .ant-modal-modal-title {
+        height: 32px;
+        line-height: 32px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .ant-modal-btn {
+        font-size: 20px;
+    }
+}
+
+.ant-modal-wrap {
+    overflow: hidden;
+}
+.ant-modal {
+    padding-bottom: 0;
+}
+
+input{
+    caret-color: #b13b89;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none; 
+    margin: 0; 
+}
+
+// 谷歌浏览器滚动条样式
+::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  height: 6px;
+  opacity: .5;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #efefef;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: linear-gradient(to right, #f9f9f9 0, #ccc 100%);
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+  border-color: #c2c2c2;
+  background: linear-gradient(to right, #efefef 0, #bbb 100%);
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  border-color: #aaa;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#f0f0f0),
+    to(#cfcfd1),
+    color-stop(0.5, #ececed),
+    color-stop(0.5, #d8d8d8)
+  );
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: linear-gradient(to bottom, #f9f9f9 0, #ccc 100%);
+}
+::-webkit-scrollbar-thumb:horizontal:hover {
+  border-color: #c2c2c2;
+  background: linear-gradient(to bottom, #efefef 0, #bbb 100%);
+}
+::-webkit-scrollbar-thumb:horizontal:active {
+  border-color: #aaa;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f0f0f0),
+    to(#cfcfd1),
+    color-stop(0.5, #ececed),
+    color-stop(0.5, #d8d8d8)
+  );
+}
+

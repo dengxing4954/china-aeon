@@ -1,0 +1,194 @@
+@import '../../../common/style/common.less';
+
+@white: #fff;
+@ticket_font: SimSun;
+@sty_font: MicrosoftYaHei;
+@bgDark: #363646;
+@fntDark: #2A2939;
+@actColor: #BE4C94;
+
+.center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_group(@bg, @color) {
+    flex: 1;
+    background-color: @bg;
+    color: @color;
+    font-size: 18px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid @bgDark;
+    margin: 0 10px 0 10px;
+}
+
+.clear_machine {
+    .head {
+        line-height: 50px;
+        background: @bgColor;   //zb
+        font-size: 23px;
+        color: @white;
+        font-family: @sty_font;
+        text-align: center;
+        border-radius: 10px 10px 0 0;   //zb
+        img {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .content {
+        background-color: #Fff; //zb
+        padding: 50px 20px; //zb
+        border-radius: 10px;    //zb
+        .btn_group {
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 15px;
+            padding-top: 10px;
+            background-color: #FFFFFF;
+            .bBtn {
+                .btn_group(@bg: #fff; @color: @fntDark);
+                font-family: @sty_font;
+            }
+            .wBtn {
+                .btn_group(@bg: @secondColor; @color: #fff);    //zb
+                border: 1px solid @secondColor; //zb
+                font-family: @sty_font;
+            }
+        }
+        .report_preview {
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 350px;
+            margin-top: 10px;
+            padding-left: 65px;
+            padding-right: 65px;
+            background-color: #FFFFFF;
+            word-wrap: normal;
+            .ticket_head {
+                font-weight: 600;
+                font-size: 20px;
+                div {
+                    line-height: 32px;
+                    font-family: @ticket_font;
+
+                }
+            }
+            .center {
+                font-family: @ticket_font;
+                font-size: 28px;
+                text-align: center;
+                font-weight: 700;
+            }
+            .subtitle {
+                text-align: center;
+            }
+            .ticket_content {
+                display: flex;
+                flex-direction: row;
+                font-size: 17px;
+                .item_title {
+                    flex: 1.5;
+                    font-family: @ticket_font;
+                }
+                .item_content {
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    .cont_num {
+                        width: 45px;
+                        text-align: right;
+                    }
+                    .cont_amount {
+                    }
+                    div {
+                        font-family: @ticket_font;
+                    }
+                }
+            }
+            .separation_center {
+                text-align: center;
+            }
+            .separation {
+                width: 100%;
+                overflow: hidden;
+            }
+            .gm_room {
+                font-family: SimSun;
+                font-size: 17px;
+            }
+        }
+        .tip_msg {
+            .center();
+            flex-direction: column;
+            margin-top: 10px;
+            height: 350px;
+            background-color: #FFFFFF;
+            .title {
+                color: #cccccc;
+                font-size: 16px;
+            }
+            img {
+                margin-top: 20px;
+                width: 130px;
+                height: 150px;
+            }
+        }
+        //padding-bottom: 10px; //zb
+    }
+    .foot {
+        height: 50px;
+    }
+}
+
+.sortOutModal {
+    font-weight: normal;
+    font-stretch: normal;
+    .ant-modal-body{
+        height: 220px;
+    }
+    .head {
+        line-height: 50px;
+        background: @bgColor;   //zb
+        font-size: 23px;
+        color: @white;
+        text-align: center;
+        border-radius: 10px 10px 0 0;   //zb
+        img {   
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .content {
+        background-color: #F9F9F9;
+        padding: 10px 0;
+        text-align: center;
+        .msg {
+            height: 150px;
+            line-height: 150px;
+            background-color: @white;
+            font-size: 22px;
+        }
+    }
+    .ant-modal-footer {
+        padding: 15px 8px;
+        text-align: center;
+        .ant-btn {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            // border-radius: 5px;
+            // border-color: #333;
+        }
+    }
+}
+

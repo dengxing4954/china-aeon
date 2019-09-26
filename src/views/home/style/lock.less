@@ -1,0 +1,131 @@
+@bgDark: #363646;
+@fntDark: #2A2939;
+@white: #ffffff;
+
+.center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm_btn(@bg: 0; @color: 0;) {
+    background-color: @bg;
+    color: @color;
+    font-size: 18px;
+    width: 70px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid @bgDark;
+    margin-right: 15px;
+}
+
+
+.lock_screen {
+    font-family: MicrosoftYaHei;
+    font-weight: normal;
+    font-stretch: normal;
+    .head {
+        .center();
+        height: 49px;
+        background: @bgDark;
+        font-size: 23px;
+        color: #ffffff;
+    }
+    .content {
+        background-color: #F9F9F9;
+        .msg {
+            height: 51px;
+            background-color: #fff;
+            padding: 18px 0 16px 10px;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        padding-bottom: 15px;
+    }
+    .foot {
+        .center();
+        height: 69px;
+        .btn {
+            background-color: @bgDark;
+            color: #fff;
+            font-size: 12px;
+            width: 150px;
+            height: 40px;
+            border-radius: 4px;
+            &:active {
+                background-color: #000;
+            }
+        }
+    }
+}
+
+.confirm_screen {
+    //font-family: MicrosoftYaHei;
+    //font-weight: normal;
+    //font-stretch: normal;
+    //.lock_body {
+    //    .info {
+    //        color: #faad14;
+    //    }
+    //}
+    //.modal_btn {
+    //    display: flex;
+    //    flex-direction: row-reverse;
+    //    margin-top: 16px;
+    //    .submit {
+    //        .confirm_btn(@bg: @bgDark; @color: #fff;);
+    //        &:active {
+    //            background-color: #000;
+    //        }
+    //    }
+    //    .cancel {
+    //        .confirm_btn(@bg: #fff; @color: #2A2939;);
+    //        &:active {
+    //            background-color: darken(hsl(0, 0%, 100%), 10%);
+    //        }
+    //    }
+    //}
+    font-family: MicrosoftYaHei;
+    font-weight: normal;
+    font-stretch: normal;
+    .head {
+        line-height: 50px;
+        background: @bgDark;
+        font-size: 23px;
+        color: @white;
+        text-align: center;
+        img {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .content {
+        background-color: #F9F9F9;
+        padding-bottom: 15px;
+        padding-top: 10px;
+        text-align: center;
+        .msg {
+            height: 51px;
+            background-color: @white;
+            padding-top: 13px;
+            font-size: 18px;
+        }
+    }
+    .foot {
+        .center();
+        height: 69px;
+        .btn {
+            background-color: @bgDark;
+            color: @white;
+            font-size: 18px;
+            width: 150px;
+            height: 33px;
+            &:active {
+                background-color: #000;
+            }
+        }
+    }
+}
