@@ -77,7 +77,7 @@
     "license": "CC0-1.0",
     "devDependencies": {
         "babel-plugin-import": "^1.6.5",
-        "electron": "^6.0.0",
+        "electron": "^7.2.4",
         "electron-packager": "^13.1.1",
         "electron-rebuild": "^1.8.4",
         "electron-winstaller": "^3.0.4",
